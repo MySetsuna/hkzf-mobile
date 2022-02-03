@@ -100,6 +100,7 @@ const NewsItems = (props) => {
     <div className={indexStyle.newsItems} key={item.id}>
       <div className={indexStyle.newsImgwrap}>
         <Image
+          style={{width:'109%'}}
           className={indexStyle.newsItemImg}
           src={`http://192.168.3.13:8080${item.imgSrc}`}
           alt=""
