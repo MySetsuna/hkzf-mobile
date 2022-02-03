@@ -1,0 +1,7 @@
+/**antd mobile 主题设置*/
+html,body{
+  margin: 0;
+}
+:root:root {
+  --adm-color-primary: #21b97a;
+}

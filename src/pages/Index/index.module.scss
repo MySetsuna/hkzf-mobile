@@ -1,0 +1,89 @@
+.content {
+  height: 212px;
+  color: #ffffff;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  user-select: none;
+  position: fixed;
+  top: 0;
+}
+
+.nvbar {
+  color: black !important;
+  margin-bottom: 4px;
+}
+
+.navImg{
+  width: 48px;
+}
+
+.navTitle{
+  margin-top: 33px;
+  font-size: 3.6vw;
+  font-weight: normal;
+}
+
+.groups{
+  color: #000;
+  background-color: #f6f5f6;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.groupsTile{
+  position: relative;
+    margin: 15px 0px 15px 10px;
+    font-size: 15px;
+    
+}
+
+.groupsMore{
+  color: #787d82;
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.groupItem{
+  background: #ffffff;
+  text-align: center;
+  color: #999999;
+  height: 75px;
+  display:flex;
+  line-height: 9px;
+  justify-content: center;
+  align-items: center;
+}
+
+.groupItem:active {
+  background-color: #f3f2f3;
+}
+
+.groupDesc{
+  margin: 0 0 0 auto;
+}
+
+.itemTitle{
+  color: #000;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 0;
+}
+
+.itemInfo{
+  font-size: 12px;
+  color: #999;
+}
+
+.itemImg{
+  margin: 10px auto;
+  font-size: 12px;
+}
+
+.agroupGrid{
+  margin-bottom:10px;
+}
+
