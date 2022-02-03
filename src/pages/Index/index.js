@@ -49,12 +49,12 @@ const swiperItems = (swipers) => {
   return swipers.map((img, index) => (
     <Swiper.Item key={img.id}>
       <div
-        style={{ cursor: 'pointer' }}
+        className={indexStyle.swiperImg}  
         onClick={() => {
           Toast.show(`你点击了卡片 ${index + 1}`)
         }}
       >
-        <Image alt={`${img.alt}`} width={'100%'} src={`http://192.168.3.13:8080${img.imgSrc}`} />
+        <Image alt={`${img.alt}`} src={`http://192.168.3.13:8080${img.imgSrc}`} />
       </div>
     </Swiper.Item>
   ))
@@ -62,15 +62,15 @@ const swiperItems = (swipers) => {
 
 /**租房小组 */
 const groupItems = (groups) => {
-  return groups.length>0&&groups.map(item=>(
-    <Grid.Item key={item.id}>
+  return groups.length > 0 && groups.map(item => (
+    <Grid.Item key={`groups${item.id}`}>
       <div className={indexStyle.groupItem}>
         <div className={indexStyle.groupDesc}>
           <p className={indexStyle.itemTitle}>{item.title}</p>
           <span className={indexStyle.itemInfo}>{item.desc}</span>
         </div>
         <div className={indexStyle.itemImg}>
-          <img
+          <Image
             width={55}
             height={55}
             src={`http://192.168.3.13:8080${item.imgSrc}`}
@@ -79,6 +79,41 @@ const groupItems = (groups) => {
       </div>
     </Grid.Item>
   ))
+}
+
+/**最新资讯 */
+const NewsBlank = (props)=>{
+  let news = props.news
+    return (
+      <div className={indexStyle.news}>
+        <h3 className={indexStyle.newsTitle}>最新资讯</h3>
+        {
+          news.map(item => <NewsItems key={`news${item.id}`} item={item}/>)
+        }
+      </div>)
+}
+
+const NewsItems = (props) => {
+  let item = props.item
+  console.log(props)
+  return (
+    <div className={indexStyle.newsItems} key={item.id}>
+      <div className={indexStyle.newsImgwrap}>
+        <Image
+          className={indexStyle.newsItemImg}
+          src={`http://192.168.3.13:8080${item.imgSrc}`}
+          alt=""
+        />
+      </div>
+      <div className={indexStyle.newsItemContent}>
+        <div className={indexStyle.newsItemTitle}>{item.title}</div>
+        <div className={indexStyle.newsItemInfo}>
+          <div className={indexStyle.from}>{item.from}</div>
+          <div className={indexStyle.date}>{item.date}</div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 const Index = (props) => {
@@ -92,16 +127,18 @@ const Index = (props) => {
     getSwipers()
   }, []);
   */
-  //1.轮播图数据
+  // 1.轮播图数据
   let swipers = props.swipers
   // 2.租房小组数据
   let groups = props.groups
+  // 3.资讯数据
+  let news = props.news
 
 
   return (
     <div className={indexStyle.content}>
       {/**轮播图 */}
-      {swipers.length>0 && <Swiper loop autoplay>{swiperItems(swipers)}</Swiper>}
+      {swipers.length > 0 && <Swiper loop autoplay>{swiperItems(swipers)}</Swiper>}
       {/**导航菜单 */}
       <NavBar location={props.location} setRouteActive={props.setRouteActive}></NavBar>
       {/**租房小组 */}
@@ -113,6 +150,8 @@ const Index = (props) => {
           <Grid columns={2} gap={10}>{groupItems(groups)}</Grid>
         </div>
       </div>
+      {/**最新资讯 */}
+      <NewsBlank news={news}></NewsBlank>
     </div>
   )
 }

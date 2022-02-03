@@ -105,7 +105,8 @@ const Home = () => {
               <Index location={location}
                 setRouteActive={setRouteActive}
                 swipers={swipers}
-                groups={groups} />
+                groups={groups}
+                news={news} />
             }>
           </Route>
           <Route path='list' element={<HouseList />}>

@@ -1,14 +1,29 @@
 .content {
-  height: 212px;
+  //height: 212px;
   color: #ffffff;
   display: block;
   justify-content: center;
   align-items: center;
   font-size: 48px;
   user-select: none;
-  position: fixed;
+  //position: fixed;
   top: 0;
+  padding-bottom: 41px;
 }
+/**轮播图 */
+.swiperImg{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height:'500px';
+  width: '100%';
+  cursor: 'pointer';
+}
+
+
+
+/**首页租房小组部分*/
 
 .nvbar {
   color: black !important;
@@ -21,9 +36,11 @@
 
 .navTitle{
   margin-top: 33px;
-  font-size: 3.6vw;
+  font-size: 13px;
   font-weight: normal;
 }
+
+/**首页兴趣小组部分*/
 
 .groups{
   color: #000;
@@ -87,3 +104,64 @@
   margin-bottom:10px;
 }
 
+/** 首页最新资讯 部分*/
+.news{
+  padding: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.newsTitle{
+  color: black !important;
+  margin: 10px 0 5px 10px;
+  font-size: 15px;
+}
+
+.newsItems{
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+}
+
+.newsItems:last-child {
+  border: 0;
+}
+
+.newsItemImg{
+  margin: 0;
+}
+.newsImgwrap{
+  float: left;
+  height: 90px;
+  width: 120px;
+  margin: 10px auto 10px 10px;
+}
+
+.newsItemContent{
+  color: #000;
+  font-size: 13px;
+  margin: 10px 15px;
+  flex: 1;
+  display: inline-grid;
+}
+
+.newsItemTitle{
+  margin-bottom: 15px;
+  font-size: 14px;
+  margin-bottom: auto;
+  font-weight: bold;
+}
+
+.newsItemInfo{
+  width: 100%;
+  color: #9c9fa1;
+  font-size: 12px;
+  //line-height: 6;
+  display: flex;
+}
+.from{
+  margin: auto 0 0;
+}
+
+.date{
+  margin: auto 0 0 auto;
+}
