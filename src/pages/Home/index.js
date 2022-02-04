@@ -66,13 +66,13 @@ const Home = () => {
   /**获取轮播图数据 */
   const [swipers, setSwipers] = useState([])
   const getSwipers = async () => {
-    let res = await axios.get('http://192.168.3.13:8080/home/swiper')
+    let res = await axios.get('http://localhost:8080/home/swiper')
     setSwipers(res.data.body)
   }
   /** 获取租房小组数据 */
   const [groups, setGroups] = useState([]);
   const getGroups = async () => {
-    let res =  await axios.get('http://192.168.3.13:8080/home/groups',{
+    let res =  await axios.get('http://localhost:8080/home/groups',{
       params:{
         area:'AREA|88cff55c-aaa4-e2e0'
       }

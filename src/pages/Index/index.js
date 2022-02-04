@@ -54,7 +54,7 @@ const swiperItems = (swipers) => {
           Toast.show(`你点击了卡片 ${index + 1}`)
         }}
       >
-        <Image alt={`${img.alt}`} src={`http://192.168.3.13:8080${img.imgSrc}`} />
+        <Image alt={`${img.alt}`} src={`http://localhost:8080${img.imgSrc}`} />
       </div>
     </Swiper.Item>
   ))
@@ -73,7 +73,7 @@ const groupItems = (groups) => {
           <Image
             width={55}
             height={55}
-            src={`http://192.168.3.13:8080${item.imgSrc}`}
+            src={`http://localhost:8080${item.imgSrc}`}
             alt={item.title} />
         </div>
       </div>
@@ -95,14 +95,13 @@ const NewsBlank = (props)=>{
 
 const NewsItems = (props) => {
   let item = props.item
-  console.log(props)
   return (
     <div className={indexStyle.newsItems} key={item.id}>
       <div className={indexStyle.newsImgwrap}>
         <Image
           style={{width:'109%'}}
           className={indexStyle.newsItemImg}
-          src={`http://192.168.3.13:8080${item.imgSrc}`}
+          src={`http://localhost:8080${item.imgSrc}`}
           alt=""
         />
       </div>
@@ -121,7 +120,7 @@ const Index = (props) => {
   /** 使用useEffect会引起多次渲染组件,提升到父组件home中，避免多次发送请求
    * const [swipers, setSwipers] = useState([]);
   const getSwipers = async () => {
-    let swdata =  await axios.get('http://192.168.3.13:8080/home/swiper')
+    let swdata =  await axios.get('http://localhost:8080/home/swiper')
     setSwipers(swdata.data.body)
   }
   useEffect(() => {
