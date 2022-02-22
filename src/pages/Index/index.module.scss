@@ -1,5 +1,6 @@
 .content {
   //height: 212px;
+  width: 100%;
   color: #ffffff;
   display: block;
   justify-content: center;
@@ -12,13 +13,17 @@
 }
 /**轮播图 */
 .swiperImg{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height:'500px';
-  width: '100%';
-  cursor: 'pointer';
+  /** 如果要显示图片完整居中  如下 **/
+  // flex: 1;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // max-height:'500px';
+  // width: '100%';
+  // cursor: 'pointer';
+
+  /**如果要图片填满并且高度固定，如下*/
+  height: 212px;
 }
 
 
@@ -46,7 +51,7 @@
   color: #000;
   background-color: #f6f5f6;
   overflow: hidden;
-  padding: 0 10px;
+  width: 100%;
 }
 
 .groupsTile{
@@ -73,6 +78,7 @@
   line-height: 9px;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .groupItem:active {
@@ -102,6 +108,7 @@
 
 .agroupGrid{
   margin-bottom:10px;
+  height: 180px;
 }
 
 /** 首页最新资讯 部分*/

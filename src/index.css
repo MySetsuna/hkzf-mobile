@@ -1,7 +1,25 @@
 /**antd mobile 主题设置*/
-html,body{
+html,
+body {
   margin: 0;
+  padding: 0;
+  font-family: 'Microsoft YaHei';
+  color: #333;
+  background-color: #fff;
 }
+
+html,
+body,
+#root,
+.App {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 :root:root {
-  --adm-color-primary: #21b97a;
+    --adm-color-primary: #21b97a;
 }
